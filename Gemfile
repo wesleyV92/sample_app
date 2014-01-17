@@ -5,6 +5,9 @@ ruby '1.9.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+# Use bootstrap-sass files for CSS
+gem 'bootstrap-sass', '2.3.2.0'
+
 # Use sqlite3 as the database for Active Record, include rspec-rails to be able to test with rspec-specific generators
 #use spork for testing
 
