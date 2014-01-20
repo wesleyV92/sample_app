@@ -8,6 +8,9 @@ gem 'rails', '4.0.2'
 # Use bootstrap-sass files for CSS
 gem 'bootstrap-sass', '2.3.2.0'
 
+# add bcrypt for password hashes
+  gem 'bcrypt-ruby', '3.1.2'
+
 # Use sqlite3 as the database for Active Record, include rspec-rails to be able to test with rspec-specific generators
 #use spork for testing
 
