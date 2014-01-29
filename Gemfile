@@ -11,6 +11,15 @@ gem 'bootstrap-sass', '2.3.2.0'
 # add bcrypt for password hashes
   gem 'bcrypt-ruby', '3.1.2'
 
+#add faker to make sample users
+  gem 'faker', '1.1.2'
+
+# add will paginate to paginate users
+  gem 'will_paginate', '3.0.4'
+
+# add bootstrap will paginate to use will paginate with bootstrap pagination styles
+  gem 'bootstrap-will_paginate', '0.0.9'
+
 # Use sqlite3 as the database for Active Record, include rspec-rails to be able to test with rspec-specific generators
 #use spork for testing
 
