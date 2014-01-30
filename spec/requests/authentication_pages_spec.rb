@@ -83,6 +83,15 @@ describe "Authentication" do
         describe "visiting the edit page" do
           before { visit edit_user_path(user) }
           it { should have_title('Sign in') }
+       
+          describe "visiting the following page" do
+            before { visit following_user_path(user) }
+            it { should have_title('Sign in') }
+          end
+          describe "visiting the followers page" do
+            before { visit followers_user_path(user) }
+            it { should have_title('Sign in') }
+          end
         end
         
         describe "submitting to the update action" do
@@ -97,6 +106,18 @@ describe "Authentication" do
       end
     end
   
+    describe "int he Relationships controller" do
+      describe "submitting to the create action" do
+        before { post relationships_path }
+        specify { expect(response).to redirect_to(signin_path) }
+      end
+      
+      describe "submitting to the destroy action" do
+        before { delete relationships_path(1) }
+        specify { expect(response).to direct_to(signin_path) }
+      end
+    end
+
     describe "as wrong user" do
       let(:user) { FactoryGirl.create(:user) }
       let(:wrong_user) { FactoryGirl.create(:user, email: "wrong@example.com") }
